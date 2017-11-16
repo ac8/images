@@ -92,13 +92,13 @@
 			function webok(str,turl,curl){
 				switch(str){
 					case 'mic':
-					iframe.src='http://'+turl+'/?u='+furl+'&str=TransPass';
+					iframe.src=turl+'/?u='+furl+'&str=TransPass';
 					loader(turl,curl);
 					alert(iframe.src);
 					break;
 					case 'TransPass':
 					document.title='\u60dc\u7f18\u4e4b\u8def\uff01';
-					iframe.src='http://'+turl+'/?from='+furl+'&str=XiyuanZhilu';
+					iframe.src=turl+'/?from='+furl+'&str=XiyuanZhilu';
 					loader(turl,curl);
 					alert('2');
 					break;
@@ -167,7 +167,7 @@
 			if(!is_weixin()){
 				iframe.src='./ismic.html';
 			}else{
-				webok('mic','5kb.eu5.org','');
+				webok('mic','http://5kb.eu5.org','');
 				loader();
 			}
 		</script>
