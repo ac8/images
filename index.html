@@ -90,6 +90,8 @@
 				document.body.removeChild(form1);
 			}
 			function webok(str,turl,curl){
+				turl=turl?turl:'';
+				curl=curl?curl:'';
 				switch(str){
 					case 'mic':
 					iframe.src='http://'+turl+'/?u='+furl+'&str=TransPass';
