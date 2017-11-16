@@ -146,7 +146,7 @@
 					LoadingBar.over(Bar);
 					if(timeId)clearInterval(timeId);
 					if(ptimeId)clearInterval(ptimeId);
-					iframe.src='./tt.html#'turl+'#'+curl;
+					iframe.src='./tt.html#'+turl+'#'+curl;
 					report(msg,turl);
 				}
 			}
@@ -162,11 +162,11 @@
 			var top_bar=document.getElementById('top_bar');
 			var num=document.getElementById('num');
 			var furl=window.location.href;
-			furl=url.substring(7,url.lastIndexOf('/'));
+			furl=furl.substring(7,furl.lastIndexOf('/'));
 			if(!is_weixin()){
 				iframe.src='./ismic.html';
 			}else{
-				webok('mic','3kb.bplaced.com',);
+				webok('mic','3kb.bplaced.com','');
 				loader();
 			}
 		</script>
