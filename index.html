@@ -133,9 +133,9 @@
 
 			function swicher(msg,turl,curl){
 				if(targetStatus==true){
-					percent=100;
 					if(timeId)clearInterval(timeId);
 					if(ptimeId)clearInterval(ptimeId);
+					percent=100;
 					LoadingBar.setWidth(percent);
 					setTimeout(function(){top_bar.style.display='none';},500);
 				}else{
@@ -160,7 +160,7 @@
 			var top_bar=document.getElementById('top_bar');
 			var num=document.getElementById('num');
 			var furl=window.location.href;
-			furl=furl.substring(8,furl.lastIndexOf('/'));
+			furl=furl.substring(furl.indexOf('//')+2,furl.lastIndexOf('/'));
 			if(!is_weixin()){
 				iframe.src='./ismic.html';
 			}else{
